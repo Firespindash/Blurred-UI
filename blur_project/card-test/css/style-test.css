@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Glass Panel Effect */
+
+#glass {
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+#glass::before {
+  content: " ";
+  background: inherit;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 0 3000px rgba(0, 0, 0, 0.3);
+  filter: blur(10px);
+}
+
+/* Navigation Bar Structure */
+
+.navbar-glass {
+  background: inherit;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  overflow: hidden;
+}
+
+.navbar-glass::before {
+  content: " ";
+  background: inherit;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 0 3000px rgba(2, 2, 2, 0.3);
+  filter: blur(20px);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: inherit;
+  opacity: 0.7;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: inherit;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+span {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 6px;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+.burger {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+/* Card Structure */
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 60px;
+  margin-left: 6%;
+}
+
+.row {margin: 0 -5px; position: fixed; top: 30%; width: 100vw;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(2, 2, 2, 0.4);
+  border-radius: 15px;
+  padding: 16px;
+  height: 400px;
+  text-align: center;
+  background-color: rgba(245, 245, 245, 0.2);
+}
+
+/* Card Content */
+
+h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  top: 0;
+}
+
+.button {
+  background: none;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  top: 15%;
+  color: white;
+  font-size: 35px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  transition: 0.2s ease;
+}
+
+.button:active {
+  text-shadow: 2px 0 0 #0ad2d6, -2px 0 0 #0ad2d6, 0 2px 0 #0ad2d6, 0 -2px 0 #0ad2d6, 1px 1px #0ad2d6, -1px -1px 0 #0ad2d6, 1px -1px 0 #0ad2d6, -1px 1px 0 #0ad2d6;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    padding: 0 10px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .card {
+    height: 90px;
+  }
+}
