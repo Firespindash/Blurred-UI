@@ -5,32 +5,36 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Blurred UI</title>
+    <script type="text/javascript">
+		closeIt = () => document.getElementsByClassName('dropdown-content')[0].style.display = 'none'
+	</script>
   </head>
   <body>
-    <div id="glass"></div>
+    <div id="glass" onclick="closeIt()"></div>
+    <div class="dropdown-content">
+    	<h5>Learning Process:</h5>
+        <a href="../html-test/img-test/blur-img.html" target="_blank">Background</a>
+        <a href="../navbar-test/test-blur.html" target="_blank">Navbar</a>
+        <a href="../card-test/card-test.html" target="_blank">Cards</a>
+        <h5>Credits:</h5>
+        <p>Designed and created by Lucas Adriel</p>
+   	  	<hr>
+        <small>Copyright &copy; 2019</small>
+   </div>
+   
     <div id="navbar-glass">
       <div class="navbar">
         <span>Blurred UI</span>
-        <div class="dropdown">
-          <button class="dropbtn">
+        <div class="dropdown"> 
+          <button class="dropbtn" onmouseenter="(document.getElementsByClassName('dropdown-content')[0].style.display == 'block') ? document.getElementsByClassName('dropdown-content')[0].style.display = 'none' : document.getElementsByClassName('dropdown-content')[0].style.display = 'block'">
             <div class="burger"></div>
             <div class="burger"></div>
             <div class="burger"></div>
           </button>
-          <div class="dropdown-content">
-            <h5>Learning Process:</h5>
-            <a href="../html-test/img-test/blur-img.html" target="_blank">Background</a>
-            <a href="../navbar-test/test-blur.html" target="_blank">Navbar</a>
-            <a href="../card-test/card-test.html" target="_blank">Cards</a>
-            <h5>Credits:</h5>
-            <p>Design and created by Lucas Adriel</p>
-            <hr>
-            <small>Copyright &copy; 2019</small>
-          </div>
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" onclick="closeIt()">
       <div class="column">
         <div class="card">
           <img src="img/morning.jpg" alt="morning" class="image">

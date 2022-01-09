@@ -1,18 +1,18 @@
 // DOM Elements
 const morning = document.getElementById('period1'),
-  afternoon = document.getElementById('period2'),
-  night = document.getElementById('period3');
+  afternoon   = document.getElementById('period2'),
+  night       = document.getElementById('period3');
 
 // Add Events
-morning.addEventListener('click', function(){
+morning.addEventListener('click', function() {
   document.body.style.backgroundImage = "url('img/morning.jpg')";
 })
 
-afternoon.addEventListener('click', function(){
+afternoon.addEventListener('click', function() {
   document.body.style.backgroundImage = "url('img/afternoon.jpg')";
 })
 
-night.addEventListener('click', function(){
+night.addEventListener('click', function() {
   document.body.style.backgroundImage = "url('img/night.jpg')";
 })
 

@@ -5,9 +5,12 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style-test.css">
     <title>Test of Blur</title>
+    <script type="text/javascript">
+		closeIt = () => document.getElementsByClassName('dropdown-content')[0].style.display = 'none'
+   	</script>
   </head>
   <body>
-    <div id="glass">
+    <div id="glass" onclick="document.getElementsByClassName('dropdown-content')[0].style.display = 'none'">
 
     </div>
     <div class="content">
@@ -15,17 +18,17 @@
         <li><span>NavBar</span></li>
       </ul>
       <div class="dropdown">
-        <button class="dropbtn">
+        <button class="dropbtn" onmouseenter="(document.getElementsByClassName('dropdown-content')[0].style.display == 'block') ? document.getElementsByClassName('dropdown-content')[0].style.display = 'none' : document.getElementsByClassName('dropdown-content')[0].style.display = 'block'">
           <div class="burger"></div>
           <div class="burger"></div>
           <div class="burger"></div>
         </button>
-        <div class="dropdown-content">
-          <h5>NavBar Menu:</h5>
-          <a href="index.html">w3Example</a>
-          <a href="test-blur.html" class="active">Blur</a>
-        </div>
       </div>
+    </div>
+    <div class="dropdown-content">
+	    <h5>NavBar Menu:</h5>
+        <a href="index.html">w3Example</a>
+	    <a href="test-blur.html" class="active">Blur</a>
     </div>
   </body>
 </html>
